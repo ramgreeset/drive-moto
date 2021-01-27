@@ -1,0 +1,103 @@
+.header {
+    font-size: 20px;
+
+    &__top {
+        min-height: 122px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__adress {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+
+    &__user {
+        margin-right: 17px;
+        position: relative;
+
+        &-link {
+            margin: 0 3px;
+        }
+    }
+}
+
+.nav {
+    &__list {
+        font-weight: 700;
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.basket__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    background-color: $main-color;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: 10px;
+}
+
+.catigories {
+    &__list {
+        background-color: #F0F0F4;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__link {
+        transition: text-shadow .3s linear;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            background: $main-color;
+            height: 2px;
+            transition: width .3s linear;
+        }
+
+        &:hover {
+            transition: text-shadow .3s linear;
+            text-shadow: 0 0 0.65px rgb(34, 34, 34);
+
+            &::after {
+                transition: width .3s linear;
+                width: 100%;
+            }
+        }
+    }
+}
